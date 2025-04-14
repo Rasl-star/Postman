@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static date.UserGenerator.Registration.getRegistredUser;
-import static date.UserGenerator.Registration.getUser;
-import static date.UserGenerator.getRandomLogin;
-import static date.UserGenerator.getRandomPassword;
+import static test.UserGenerator.Registration.getRegistredUser;
+import static test.UserGenerator.Registration.getUser;
+import static test.UserGenerator.getRandomLogin;
+import static test.UserGenerator.getRandomPassword;
 
 
 public class AuthTest {

@@ -1,4 +1,5 @@
-package date;
+package test;
+
 
 import com.github.javafaker.Faker;
 import io.restassured.builder.RequestSpecBuilder;
@@ -23,7 +24,7 @@ public class UserGenerator {
     private UserGenerator() {
     }
 
-    private static void sendRequest(RegistrationDto user) {
+    private static void sendRequest(test.UserGenerator.RegistrationDto user) {
         given()
                 .spec(requestSpec)
                 .body(user)
@@ -47,12 +48,12 @@ public class UserGenerator {
         private Registration() {
         }
 
-        public static RegistrationDto getUser(String status) {
-            var user = new RegistrationDto(getRandomLogin(), getRandomPassword(), status);
+        public static test.UserGenerator.RegistrationDto getUser(String status) {
+            var user = new test.UserGenerator.RegistrationDto(getRandomLogin(), getRandomPassword(), status);
             return user;
         }
 
-        public static RegistrationDto getRegistredUser(String status) {
+        public static test.UserGenerator.RegistrationDto getRegistredUser(String status) {
             var registerdUser = getUser(status);
             sendRequest(registerdUser);
             return registerdUser;
